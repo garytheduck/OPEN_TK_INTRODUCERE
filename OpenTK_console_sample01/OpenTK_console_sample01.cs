@@ -42,7 +42,7 @@ namespace OpenTK_console_sample01 {
             }
             if (e.Key == Key.Down)
             {
-                delta -= 0.3f;
+                delta -= 0.4f;
             }
         }
         
