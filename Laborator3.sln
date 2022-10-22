@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26730.16
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32126.315
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTK_console_sample01", "OpenTK_console_sample01\OpenTK_console_sample01.csproj", "{145A2F7D-F5EC-4DF7-939B-94A6C8F87AF5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exemplu sample1", "OpenTK_console_sample01\Exemplu sample1.csproj", "{145A2F7D-F5EC-4DF7-939B-94A6C8F87AF5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTK_console_sample02", "OpenTK_console_sample02\OpenTK_console_sample02.csproj", "{283A8988-2BE8-4265-ACB5-EE345D6AC5BE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exemplu sample2", "OpenTK_console_sample02\Exemplu sample2.csproj", "{283A8988-2BE8-4265-ACB5-EE345D6AC5BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTK_immediate_mode", "OpenTK_immediate_mode\OpenTK_immediate_mode.csproj", "{DD2A8F05-D581-443A-9199-C80915C0B07B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul_Imediat", "OpenTK_immediate_mode\Modul_Imediat.csproj", "{DD2A8F05-D581-443A-9199-C80915C0B07B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

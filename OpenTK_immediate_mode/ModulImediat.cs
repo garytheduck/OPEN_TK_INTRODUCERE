@@ -6,12 +6,12 @@ using OpenTK.Graphics.OpenGL;
 using OpenTK.Input;
 namespace OpenTK_immediate_mode
 {
-    class ImmediateMode : GameWindow
+    class ModulImediat : GameWindow
     {
 
         private const int XYZ_SIZE = 75;
 
-        public ImmediateMode() : base(800, 600, new GraphicsMode(32, 24, 0, 8)) {
+        public ModulImediat() : base(800, 600, new GraphicsMode(32, 24, 0, 8)) {
             VSync = VSyncMode.On;
 
             Console.WriteLine("OpenGl versiunea: " + GL.GetString(StringName.Version));
@@ -131,7 +131,7 @@ namespace OpenTK_immediate_mode
                Ideal ar fi ca după fiecare UpdateFrame să avem si un RenderFrame astfel încât toate obiectele generate
                în scena 3D să fie actualizate fără pierderi (desincronizări între logica aplicației și imaginea randată
                în final pe ecran). */
-            using (ImmediateMode example = new ImmediateMode()) {
+            using (ModulImediat example = new ModulImediat()) {
                 example.Run(30.0, 0.0);
             }
         }

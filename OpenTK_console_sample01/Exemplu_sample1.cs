@@ -19,14 +19,25 @@ namespace OpenTK_console_sample01 {
     class SimpleWindow : GameWindow {
 
         float delta = 0;
+        float mousecoordx = 0;
+        float mousecoordy = 0;
         // Constructor.
         public SimpleWindow() : base(800, 600) {
             KeyDown += Keyboard_KeyDown;
+            MouseMove += Mouse_Move;
 
         }
 
         // Tratează evenimentul generat de apăsarea unei taste. Mecanismul standard oferit de .NET
         // este cel utilizat.
+        void Mouse_Move(object sender, MouseMoveEventArgs e)
+        {
+            Console.WriteLine("THIS IS X : " + e.X);
+            mousecoordx = e.X;
+            mousecoordy = e.Y;
+            Console.WriteLine("THIS IS Y : " + e.Y);
+
+        }
         void Keyboard_KeyDown(object sender, KeyboardKeyEventArgs e) {
             if (e.Key == Key.Escape)
                 this.Exit();
@@ -64,7 +75,6 @@ namespace OpenTK_console_sample01 {
             GL.MatrixMode(MatrixMode.Projection);
             GL.LoadIdentity();
             GL.Ortho(-1.0, 1.0, -1.0, 1.0, 0.0, 4.0);
-            Console.WriteLine("CACA");
         }
 
         // Secțiunea pentru "game logic"/"business logic". Tot ce se execută în această secțiune va fi randat
@@ -84,15 +94,14 @@ namespace OpenTK_console_sample01 {
             GL.Begin(PrimitiveType.Triangles);
 
             GL.Color3(Color.MidnightBlue);
-            GL.Vertex2(-1.0f, 1.0f + delta);
+            GL.Vertex2(-mousecoordx/200, -mousecoordy/200 + delta);
             GL.Color3(Color.SpringGreen);
-            GL.Vertex2(0.0f, -1.0f + delta);
+            GL.Vertex2(mousecoordx/200, -mousecoordy/200 + delta);
             GL.Color3(Color.Ivory);
-            GL.Vertex2(1.0f, 1.0f + delta);
+            GL.Vertex2(mousecoordx/200, 1.0f + delta);
 
             GL.End();
             // Sfârșitul modului imediat!
-
             this.SwapBuffers();
         }
 
